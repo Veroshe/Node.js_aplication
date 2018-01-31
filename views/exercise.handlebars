@@ -1,0 +1,35 @@
+
+<section class="container extramarg">
+    <section class="row">
+        <section class="col-sm-9">
+            {{#if all}}
+                <ul class="list-group">
+                    {{#each content}}
+                    <li class="list-group-item ">
+                        <section class=" shortcut">
+                            {{{question}}}
+                        </section>
+                        <a href="/zadania_s/{{_id}}"> Przejdź do zadania</a>
+                    </li>
+                    {{/each}}
+                </ul>
+            {{/if}}
+            {{#if one}}
+            <form  method="post">
+            <section class="form-group">
+                <section class="question"> {{{content.question}}} </section>
+                <section class="form-check">
+                    <label class="form-check-label" for="answer">
+                        <input type="text" name="answer" />
+                    </label>
+                </section>
+            </section>
+                <input class="btn main-color" type="submit" value="Zatwierdź">
+            </form>
+            {{/if}}
+
+        </section>
+
+
+    </section>
+</section>

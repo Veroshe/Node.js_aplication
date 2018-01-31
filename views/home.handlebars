@@ -1,0 +1,58 @@
+<!-- views/home.handlebars -->
+{{#if user}}
+    <section class="container-fluid user-panel">
+
+        <section class="container-fluid user-name">
+            <h3 style="margin:0;">Witaj {{user.username}} </h3>
+        </section>
+
+        <section class="user-statics container-fluid">
+
+                <section class="row flex-md-row">
+                    <section class="col-md-6 caption">
+                        <p> Ilość rozwiązanych testów</p>
+                    </section>
+                    <section class="col-md-6">
+                        <p> {{user.testsdone}}</p>
+                    </section>
+                    <section class="col-md-6 caption">
+                        <p> Ilość poprawnie rozwiązanych testów</p>
+                    </section>
+                    <section class="col-md-6">
+                        <p> {{user.testspassed}}</p>
+                    </section>
+                    <hr>
+                    <section class="col-md-6 caption">
+                        <p> Ilość rozwiązanych zadań</p>
+                    </section>
+                    <section class="col-md-6">
+                        <p> {{user.exercisesdone}}</p>
+                    </section>
+                    <hr>
+                    <section class="col-md-6 caption">
+                        <p> Ilość poprawnie rozwiązanych zadań</p>
+                    </section>
+                    <section class="col-md-6">
+                        <p> {{user.exercisespassed}}</p>
+                    </section>
+
+
+                </section>
+        </section>
+    </section>
+    <section class="jumbotron jumbotron-fluid user-panel-j">
+    </section>
+
+
+  
+{{else}}
+    <section class="jumbotron jumbotron-fluid">
+        <section class="container main-sign" >
+            <h1 class="display-1 main-sign-title" >Lorem ipsum</h1>
+            <h2>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.</h2>
+            <h3> Excepteur sint occaecat cupidatat non proident</h3>
+        </section>
+    </section>
+  
+{{/if}}
+   

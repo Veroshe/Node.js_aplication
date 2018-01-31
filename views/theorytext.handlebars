@@ -1,0 +1,53 @@
+<!-- vitheory.handlebarsbars -->
+<section class="container">
+
+    <section class="row">
+
+
+        <section class="col-sm-8 lead">
+
+
+            <h1 class="mt-4">{{theory.title}}</h1>
+
+            {{#if theory.texts.text1}}
+
+                   {{{theory.texts.text1}}}
+
+                <hr>
+            {{/if}}
+
+            {{#if theory.images.image1.filename}}
+                   <img class="img-fluid rounded" src="data/files/{{theory.images.image1.filename}}" alt="{{theory.images.image1.filename}}">
+                <hr>
+            {{/if}}
+
+            {{#if theory.texts.text2}}
+                    {{{theory.texts.text2}}}
+                <hr>
+            {{/if}}
+
+
+            {{#if theory.images.image2.filename}}
+                    <img class="img-fluid rounded" src="data/files/{{theory.images.image2.filename}}" alt="{{theory.images.image2.filename}}">
+                <hr>
+            {{/if}}
+
+            {{#if theory.texts.text3}}
+                    {{{theory.texts.text3}}}
+                <hr>
+            {{/if}}
+
+
+            {{#if theory.images.image3.filename}}
+                <img class="img-fluid rounded" src="data/files/{{theory.images.image3.filename}}" alt="{{theory.images.image3.filename}}">
+            {{/if}}
+
+
+
+
+        </section>
+
+
+    </section>
+
+</section>

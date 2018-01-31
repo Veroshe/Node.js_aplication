@@ -1,0 +1,42 @@
+
+<section class="container extramarg">
+    <section class="row">
+        <section class="col-sm-8">
+            <form  method="post">
+            {{#each content}}
+            <section class="form-group">
+                <section class="question"> {{{question}}} </section>
+                <section class="form-check">
+                    <label class="form-check-label">
+                        <input class="form-check-input" type="radio" name="{{_id}}"  value="{{answer1}}">
+                        {{answer1}}
+                    </label>
+                </section>
+                <section class="form-check">
+                    <label class="form-check-label">
+                        <input class="form-check-input" type="radio" name="{{_id}}" value="{{answer2}}">
+                        {{answer2}}
+                    </label>
+                </section>
+                <section class="form-check">
+                    <label class="form-check-label">
+                        <input class="form-check-input" type="radio" name="{{_id}}" value="{{answer3}}">
+                        {{answer3}}
+                    </label>
+                </section>
+            </section>
+                <hr>
+            {{/each}}
+                <input class="btn main-color" type="submit" value="Zatwierdź">
+            </form>
+
+        </section>
+
+        <section class="col-sm-4 btncolumn">
+            <form method="get">
+                <button type="submit" class="btn" style="background-color: #EE9A49" > Wylosuj nowy zestaw pytań</button>
+            </form>
+        </section>
+
+    </section>
+</section>

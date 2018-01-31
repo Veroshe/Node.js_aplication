@@ -1,0 +1,90 @@
+
+<section class="container">
+    <h2 class="basic-title"> Lorem ipsum dolor sit amet</h2>
+    <section class="row">
+        <section class="col-sm-9 lead">
+            {{#if basic}}
+            {{#each content}}
+            <section>
+                <h4> Title</h4>
+                    <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                    {{#if defimage}}
+                        <img class="img-fluid align-left" src="data/files/img.jpg" alt="{{defimage.filename}}">
+                    {{/if}}
+                <hr>
+            </section>
+            {{/each}}
+            {{/if}}
+
+            {{#if basic1}}
+                {{#each content}}
+                    <h4> {{title}}</h4>
+                    {{#if memimage.imagedef}}
+                        <img class="img-fluid defimg" src="data/files/memfunctions/{{memimage.imagedef.filename}}" alt="{{memimage.imagedef.filename}}">
+                    {{/if}}
+                    {{#if memimage.imagechart}}
+                        <img class="img-fluid chartimg" src="data/files/memfunctions/{{memimage.imagechart.filename}}" alt="{{memimage.imagechart.filename}}">
+                    {{/if}}
+                    <hr>
+                {{/each}}
+            {{/if}}
+
+            {{#if basic2}}
+                {{#each content}}
+                    <h4> {{title}}</h4>
+                    {{#if image}}
+                        <img class="img-fluid defimg" src="data/files/calculations/{{image.filename}}" alt="{{image.filename}}">
+                    {{/if}}
+                    {{#if text}}
+                        {{{text}}}
+                    {{/if}}
+                    <hr>
+                {{/each}}
+            {{/if}}
+
+            {{#if basic3}}
+                {{#each content}}
+                    <h4> {{title}}</h4>
+                    {{#if text}} {{{text}}}{{/if}}
+                    {{#if memimage.imagechart}}
+                        <img class="img-fluid" src="data/files/memfunctions/{{memimage.imagechart.filename}}" alt="{{memimage.imagechart.filename}}">
+                    {{/if}}
+                    {{#if memimage.imagedef}}
+                        <img class="img-fluid" src="data/files/memfunctions/{{memimage.imagedef.filename}}" alt="{{memimage.imagedef.filename}}">
+                    {{/if}}
+                    <hr>
+                {{/each}}
+            {{/if}}
+        </section>
+        <section class="col-sm-3">
+            <section class="card my-3">
+                <h5 class="card-header"> Ucz się dalej</h5>
+                <section class="card-body">
+                    <section class="row">
+                        <section class="col">
+                            <ul class="list-group">
+                                <li class="list-group-item">
+                                    <a href="/basics">Section 21</a>
+                                </li>
+                                <li class="list-group-item">
+                                    <a href="/basics1">Section 22</a>
+                                </li>
+                                <li class="list-group-item">
+                                    <a href="/basics2">Section 23</a>
+                                </li>
+                                <li class="list-group-item">
+                                    <a href="/basics3">Section 24</a>
+                                </li>
+                            </ul>
+                        </section>
+                    </section>
+                </section>
+            </section>
+
+
+        </section>
+
+    </section>
+
+
+</section>

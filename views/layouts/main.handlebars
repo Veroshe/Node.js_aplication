@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Logika Rozmyta</title>
+
+    <!-- Bootstrap core CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="/views/styles/temp.css" />
+</head>
+
+<body>
+
+<nav class="navbar navbar-toggleable-md navbar-light fixed-top">
+
+    <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <a class="navbar-brand nav-logo" href="/" style="color:#FF7F24">LR</a>
+
+
+    <section class="collapse navbar-collapse" id="navbarSupportedContent">
+
+        <ul class="navbar-nav nav-pills mr-auto">
+            <li class="nav-item active">
+                <a class="nav-link" href="/">Home </a>
+            </li>
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-togglec" id="drop" data-toggle="dropdown" href="" role="button">Teoria</a>
+                <div class="dropdown-menu">
+                    <a class="dropdown-item" href="/intro"> Section 1 </a>
+                    <a class="dropdown-item" href="/basics">Section 2</a>
+                    <a class="dropdown-item" href="/mamdani">Section 3</a>
+                    <a class="dropdown-item" href="/sugeno">Section 4</a>
+                </div>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="/test">Testy</a>
+            </li>
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-togglec" id="drop" data-toggle="dropdown" href="" role="button">Zadania</a>
+                <div class="dropdown-menu">
+                    <a class="dropdown-item" href="/zadania_s">Zadania typ 1</a>
+                    <a class="dropdown-item" href="/zadania_s">Zadania typ 2</a>
+                </div>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="/contact">Kontakt</a>
+            </li>
+        </ul>
+
+
+        {{#if user}}
+            <p class="navbar-text" style="margin:0;">
+                Zalogowany jako
+                {{user.username}}
+            </p>
+            <a class="navbar-text" href="/logout" style="color: #FF7F24;">Wyloguj</a>
+        {{else}}
+            <form class="form-inline" role="search" id="local-sign-in" action="/login" method="post">
+                <section class="form-group mx-sm-3">
+                    <input type="text" class="form-control" placeholder="Login" name="username">
+                </section>
+                <section class="form-group mx-sm-3">
+                    <input type="password" class="form-control" name="password" placeholder="Hasło">
+                </section>
+                <section class="form-group ms-sm-2">
+                    <button type="submit" class="btn mx-sm-2" style="background-color:#EE9A49;" value="Log In">Zaloguj</button>
+                </section>
+            </form>
+        {{/if}}
+    </section>
+
+</nav>
+
+
+<main role="main" class="lead" >
+    {{#if error}}
+        <p class="alert alert-danger thinner">{{{error}}}</p>
+    {{/if}}
+    {{#if success}}
+        <p class="alert alert-success thinner">{{success}}</p>
+    {{/if}}
+    {{{body}}}
+
+</main><!-- /.container -->
+
+<footer>
+    <section class="footer fixed-bottom">
+        <section class="container-fluid">
+            <span class="text-muted">Created by Weronika Kalinowska</span>
+        </section>
+    </section>
+</footer>
+
+
+<!-- Bootstrap core JavaScript
+================================================== -->
+<!-- Placed at the end of the document so the pages load faster -->
+<script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
+</body>
+</html>

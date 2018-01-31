@@ -1,0 +1,35 @@
+<!-- views/home.handlebars -->
+
+    <section class="container-fluid user-panel">
+        {{#if content}}
+        <section class="container-fluid user-name">
+            <h3 style="margin:0;">Kontakt</h3>
+        </section>
+
+        <section class="user-statics container-fluid">
+
+                <section class="row flex-md-row">
+                    <section class="col-md-6 caption">
+                        <p> Prowadzący przedmiot</p>
+                    </section>
+                    <section class="col-md-6 ">
+                        <p> {{content.teacher_name}}</p>
+                    </section>
+                    <section class="col-md-6 caption">
+                        <p> Strona przedmiotu</p>
+                    </section>
+                    <section class="col-md-6">
+                        <p> {{{content.subject_site}}}</p>
+                    </section>
+                    <section class="col-md-12">
+                        <p> {{{content.information}}}</p>
+                    </section>
+
+                </section>
+        </section>
+        {{/if}}
+
+        <section class="jumbotron jumbotron-fluid user-panel-j">
+        </section>
+    </section>
+   

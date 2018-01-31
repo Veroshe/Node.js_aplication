@@ -1,0 +1,163 @@
+html,body{
+    height:100%;
+}
+body {
+    padding-top: 8vh;
+}
+.extramarg{
+    margin-top: 4vh;
+}
+.thinner{
+    margin: 1% 0 1% 0;
+}
+.navbar {
+    background-color:#ffffff;
+    background-image: none;
+}
+.main-color{
+    background-color:#FF7F24;
+}
+.main-sign-title{
+    color:#FF7F24;
+    font-weight: bold;
+}
+.navbar-text{
+    padding:8px;
+}
+.nav-logo{
+    padding:0;
+    font-weight: bold;
+    font-size: xx-large;
+    letter-spacing: .3em;
+}
+.jumbotron{
+    height: 88vh;
+    background:  url(../images/back.png) center center no-repeat;
+    background-size: cover;
+    margin:0;
+    position: relative;
+    width: 100%;}
+
+.jumbotron:before {
+     content: '';
+     position: absolute;
+     top: 0;
+     right: 0;
+     bottom: 0;
+     left: 0;
+     background-image: linear-gradient(rgba(207,203,201,0),rgba(207,203,201,0.7),rgba(255,127,36,0.7));
+     opacity: .6;
+ }
+
+.main-sign{
+    margin-top: 10vh;
+}
+.footer{
+    text-align: right;
+}
+#drop:hover{
+    background-color: inherit;
+}
+#drop:focus{
+    background-color: inherit;
+}
+#drop:active{
+    background-color: inherit;
+}
+#drop:visited{
+    background-color: inherit;
+}
+
+.basic-title{
+    padding:2% 2% 2% 0;
+}
+.defimg{
+    max-width: 400px;
+}
+.question{
+    margin:2% 2% 2% 0;
+}
+.btncolumn{
+    text-align:center;
+}
+.user-name{
+    height: 10vh;
+    display: flex;
+    align-items: center;
+    margin: 2vh 0;
+    padding: 0 10vh;
+    background-image: linear-gradient(rgba(207,203,201,1),rgba(207,203,201,0.5),rgba(207,203,201,0));
+}
+.user-panel{
+    padding:0;
+    margin: 0;
+}
+.user-panel-j{
+    height:43vh;
+}
+.user-statics{
+    height: 35vh;
+    padding: 0 10vh;
+}
+
+.shortcut{
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 87vh;
+    max-height: 5vh;
+    margin: 0;
+}
+
+.caption{
+    font-weight: 500;
+}
+
+@media only screen and (max-width: 990px){
+    .navbar-text{
+        padding-left: 0;
+    }
+    .nav-logo{
+        font-size: large;
+    }
+}
+@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) {
+    .main-sign-title{
+        font-weight: lighter;
+    }
+    .user-panel-j{
+        max-height: 27vh;
+    }
+    .user-panel{
+        min-height: 65vh;
+    }
+}
+@media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
+
+    .main-sign-title{
+        font-weight: lighter;
+    }
+    .main-sign{
+        margin-top: 0;
+        padding: 0;
+        text-align: center;
+    }
+    .user-panel-j{
+        max-height: 27vh;
+    }
+    .user-panel{
+        min-height: 65vh;
+        text-align: center;
+    }
+    .user-name{
+        padding: 0 2vh;
+        display: flex;
+        align-items: center;
+        flex-flow: row wrap;
+        justify-content: center
+    }
+    .user-statics{
+        padding: 0 2vh;
+
+    }
+}
