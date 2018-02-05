@@ -20,4 +20,4 @@ var TheoryText = new Schema({
 
 });
 
-module.exports = mongoose.model('theorytexts', TheoryText);
+module.exports = mongoose.model('theorytext', TheoryText);
